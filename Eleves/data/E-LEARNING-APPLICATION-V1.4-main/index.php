@@ -11,21 +11,21 @@
 <body>
    <main class="bg-sign-in d-flex justify-content-center align-items-center">
       <div class=" form-sign-in bg-white mt-2 h-auto mb-2 text-center pt-2 pe-4 ps-4 d-flex flex-column">
-        <h1 class="MCR text-start ms-3 ps-1" >MCR</h1>
+        <h1 class="E-classe text-start ms-3 ps-1" >E-classe</h1>
         <div>
-          <h2 class=" sign-in text-uppercase">connexion</h2>
-        <p>Entrer vos informations pour accéder à votre compt</p>
+          <h2 class=" sign-in text-uppercase">sign in</h2>
+        <p>Enter your credentials to access your account</p>
         </div>
         <?php
           if(isset($_GET['error'])){
             if($_GET['error'] == "please enter your email or password"){
-              echo '<div class="alert alert-danger" role="alert">
-            s\'il vous plait entrez votre email ou mot de passe 
+              echo '<div sclass="alert alert-danger" role="alert">
+            please enter your email or password
           </div>';
             }
             elseif($_GET['error'] == "email or password not found"){
               echo '<div class="alert alert-danger" role="alert">
-              email ou mot de passe invalide
+              email or password not found
           </div>';
             }
           }    
@@ -36,18 +36,18 @@
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php  if(isset($_COOKIE['email'])){echo $_COOKIE['email']; }?>">
           </div>
           <div class="mb-3 text-start">
-            <label for="pwd">Mot de Passe:</label>
+            <label for="pwd">Password:</label>
             <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass" value="<?php  if(isset($_COOKIE['password'])){echo $_COOKIE['password']; }?>">
           </div>
           <div class="mb-3 form-check d-flex gap-2">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check">
-    <label class="form-check-label" for="exampleCheck1">Se Souvenir de Moi</label>
+    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
   </div>
-          <button type="submit" name="submit" class="btn text-white w-100 text-uppercase">connexion</button>
-          <p class="mt-4">Mot de Passe Oublié? <a href="resetpass.php">Reset Password</a></p>
+          <button type="submit" name="submit" class="btn text-white w-100 text-uppercase">sign in</button>
+          <p class="mt-4">Forgot your password? <a href="resetpass.php">Reset Password</a></p>
           
         </form>
-        <button href="" class="btn-register btn btn-success mb-3">Créer un Compt</button>
+        <button href="" class="btn-register btn btn-success mb-3">Create Account</button>
      </div>
 
    </main>
@@ -61,23 +61,23 @@
        </div>
        <form method="POST" id="signup" action="createaccout.php">
            <div class="mb-3 mt-3 text-start">
-               <label class="label-signup" for="username">Pseudo: <span class="valid"></span></label>
-               <input type="text" class="form-control" id="username" placeholder="Entrez le pseudo" name="username">
+               <label class="label-signup" for="username">username: <span class="valid"></span></label>
+               <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
            </div>
            <div class="mb-3 text-start">
                <label class="label-signup" for="email">Email: <span class="valid"></span></label>
-               <input type="email" class="form-control" id="Email" placeholder="Entrez l'Email" name="email">
+               <input type="email" class="form-control" id="Email" placeholder="Enter Email" name="email">
            </div>
            <div class="mb-3 text-start">
-               <label class="label-signup" for="pwd">Créer un Mot de Passe: <span class="valid"></span></label>
-               <input type="password" class="form-control" id="Pwd" placeholder="Créer un Mot de Passe" name="pass" autocomplete="on">
+               <label class="label-signup" for="pwd">Create Password: <span class="valid"></span></label>
+               <input type="password" class="form-control" id="Pwd" placeholder="Enter password" name="pass" autocomplete="on">
            </div>
            <div class="mb-3 text-start">
-               <label class="label-signup" for="conPwd">Confirmer le Mot de Passe: <span class="valid"></span></label>
-               <input type="password" class="form-control" id="conPwd" placeholder="Confirmer le Mot de Passe" name="conPass" autocomplete="on">
+               <label class="label-signup" for="conPwd">Confirm Password: <span class="valid"></span></label>
+               <input type="password" class="form-control" id="conPwd" placeholder="Confirm password" name="conPass" autocomplete="on">
            </div>
            <button type="submit" name="submit" class="btn text-white w-100 text-uppercase">sign up</button>
-           <p class="mt-4">vous avez un compt? <a href="index.php">Connexion</a></p>
+           <p class="mt-4">you have account? <a href="index.php">sign-in</a></p>
        </form>
    </div>
    </div>

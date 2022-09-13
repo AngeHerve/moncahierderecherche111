@@ -6,7 +6,7 @@
 .alert{
     height: 30px !important;
     padding: 3px 3px;
-    font-size: 10px;
+    font-size: 15px;
 }
 .bg-sign-in{
     background:linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
@@ -46,7 +46,7 @@
 button[type="submit"]{
     background-color: #00C1FE;
 }
-.MCR {
+.E-classe {
     border-left:solid 6px #00C1FE;
 }
 .bg-sign-in p,.bg-sign-in label{
@@ -134,7 +134,7 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 
 
 /* start students list  */
-.z{
+.exo_co{
     border-collapse: separate;
     border-spacing: 0 15px;
 }
@@ -151,7 +151,7 @@ table tbody{
 .student-list-header{
     border-bottom: 2px solid #E5E5E5;
 }
-.student-list-header i{
+.exo-co-header i{
     color:#00C1FE;
 }
 
@@ -170,7 +170,13 @@ table tbody{
 .fa-search{
     left:-30px;
 }
-
+.bg-sidebar a:hover{
+    
+    background-color: red;
+    border-radius: 5px;
+    width: 160px;
+   
+}
 .valid{
     color: red;
 }

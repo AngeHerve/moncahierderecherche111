@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['submit'])){
-        include './pages/connexion.php';
+        include './pages/conixion.php';
         $userName = $_POST['username'];
         $email = $_POST['email'];
         $pass = $_POST['pass'];

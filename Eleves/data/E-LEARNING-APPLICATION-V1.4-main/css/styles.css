@@ -6,7 +6,7 @@
 .alert{
     height: 30px !important;
     padding: 3px 3px;
-    font-size: 10px;
+    font-size: 15px;
 }
 .bg-sign-in{
     background:linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
@@ -46,7 +46,7 @@
 button[type="submit"]{
     background-color: #00C1FE;
 }
-.MCR {
+.E-classe {
     border-left:solid 6px #00C1FE;
 }
 .bg-sign-in p,.bg-sign-in label{
@@ -170,7 +170,13 @@ table tbody{
 .fa-search{
     left:-30px;
 }
-
+.bg-sidebar a:hover{
+    
+    background-color: red;
+    border-radius: 5px;
+    width: 160px;
+   
+}
 .valid{
     color: red;
 }

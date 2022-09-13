@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])){
-    include './pages/connexion.php';
+    include './pages/conixion.php';
     $username = $_POST['username'];
     $email = $_POST['email'];
     $requete = "SELECT * FROM users WHERE username = '$username' and Email = '$email'";

@@ -30,7 +30,7 @@
       
 <div class="sign-up bg-white mt-2 h-auto mb-2 text-center pt-4 pb-3 pe-4 ps-4 d-flex flex-column">
         <div>
-          <h2 class=" sign-in text-uppercase">S'enregistrer</h2>
+          <h2 class=" sign-in text-uppercase">sign up</h2>
         </div>
         <form method="POST" id="signup" action="createaccout.php" onsubmit="return validateInput();">
           <div class="mb-3 mt-3 text-start">

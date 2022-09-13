@@ -1,7 +1,7 @@
 <?php
         session_start();
         if(isset($_POST['submit'])){
-          include './pages/connexion.php';
+          include './pages/conixion.php';
           $email = $_POST['email'];
           $password = $_POST['pass'];
 
