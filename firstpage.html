@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>welcome</title>
+	<style type="text/css">
+		*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #2071DB;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+		.menu{
+    background-color: white;
+     color: #F7F6F6;padding: 40px;
+     position: absolute;
+     top: 60%;
+     right: 28%;
+     width: 400px;
+     line-height: normal;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 10px;
+     animation: sup 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@keyframes sup {
+    0% {
+      box-shadow: 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c;
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      box-shadow: -1px 1px #fd5c5c, -2px 2px #fd5c5c, -3px 3px #fd5c5c, -4px 4px #fd5c5c, -5px 5px #fd5c5c, -6px 6px #fd5c5c, -7px 7px #fd5c5c, -8px 8px #fd5c5c;
+      transform: translateX(8px) translateY(-8px);
+    }
+  }
+  .menu:active{
+    animation: supe 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  }
+  @keyframes supe {
+    0% {
+        box-shadow: -1px 1px #fd5c5c, -2px 2px #fd5c5c, -3px 3px #fd5c5c, -4px 4px #fd5c5c, -5px 5px #fd5c5c -6px 6px #fd5c5c, -7px 7px #fd5c5c, -8px 8px #fd5c5c;
+      transform: translateX(8px) translateY(-8px);
+      
+    }
+    100% {
+        box-shadow: 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c, 0 0 #fd5c5c;
+        transform: translateX(0) translateY(0);
+    }
+  }
+ .menu p{
+     background-color: blue;
+     padding: 10px;
+     width: 35%;
+     color: white;
+     border-radius: 8px;
+     user-select: none;
+     border: transparent;
+     margin: 5px;
+     line-height: normal;
+     list-style: none;
+     transition: .3s ease;
+      animation: mouvement 1.5s ease-in-out infinite both; 
+ }
+ .menu p a{
+ 	text-decoration: none;
+    color: white;
+ }
+ img{
+ 	position: absolute;
+ 	right: 38%;
+ 	top: 20%;
+ 	border-radius: 40px;
+ }
+ #target{
+ 	margin-left:200px ;
+ 	font-size: 3rem;
+ }
+ h2{
+ 	margin-left: 450px;
+ 	font-size: 2em;
+ 	width: 450px;
+ 	height: 70px;
+ 	background-color: white;
+ 	text-align: center;
+ 	padding: 10px;
+ }
+ b{
+    color: white;
+ 	margin-top: 330px;
+ 	margin-left: 400px;
+ 	position: absolute;
+ }
+	</style>
+</head>
+<body>
+
+ <div class="mousemove"></div>
+ 	<img src="logo.png" width="200px" height="200px">
+ 	<h2>moncahierderecherche</h2>
+        <div class="targets">
+           
+            <h3> <br><span id="target"></span></h3>
+        </div>
+        <div id="slider">
+        <nav>
+            <div class="menu">
+                <p><a href="#" target="_blank">Professeur</a></p>
+                <p><a href="#" target="_blank">Eleve</a></p>
+            </div>
+        </nav>
+        <b>
+ 	MonCahierdeRecherche est une plateforme d'echange scolaire entre professeurs  <br>et élèves dans le but d'ameliorer le niveau des élèves  <br>à travers  le partage des exercices et de devoirs.
+ </b>
+    <section>
+
+ </div>
+</section>
+ 
+
+		<script type="text/javascript">
+			const mousemove = document.querySelector(".mousemove")
+// let image = document.getElementById("img")
+// const counteurs =document.querySelectorAll(".counteur")
+// const  counteur =document.querySelector(".counteur")
+// const slider =document.getElementById("slider")
+// const menu= document.querySelector(".menu")
+// let compteurImage=1;
+// let totalImage =8;
+const target= document.getElementById("target")
+const array= ["Bienvenu","aux cour de","Remforcement","Numérique"];
+let wordIndex =0;
+let letterIndex=0;
+ 
+const createletter =()=>{
+    const letter =document.createElement('span');
+    target.appendChild(letter)
+    letter.classList.add('letter');
+    letter.style.animation= 'anim 10s ease forwards';
+    letter.textContent=array[wordIndex][letterIndex]
+
+    setTimeout(() => {
+        letter.remove();
+    }, 3000);
+}
+
+const loop = () =>{
+    setTimeout(() => {
+        if(wordIndex>=array.length){
+            wordIndex=0;
+            letterIndex=0;
+            loop();
+        }
+       else if(letterIndex < array[wordIndex].length){
+           createletter();
+           letterIndex++;
+           loop();
+       }
+       else{
+        letterIndex =0;
+        wordIndex++;
+        setTimeout(() => {
+            loop();
+        }, 3000);
+    }
+
+    }, 100);
+}
+loop();
+
+
+//  counteurs.forEach((counteur)=>{
+//      counteur.addEventListener("mouseover", (e)=>{
+//          counteur.style.border ="1px solid #111"
+//          counteur.style.borderRadius ="20px"
+//          counteur.style.transform = "scale(2)"
+//          counteur.style.opacity ="1"
+//      })
+//  })
+//  counteurs.forEach((counteur)=>{
+//     counteur.addEventListener("mouseout", (e)=>{
+//         counteur.style.dbborder ="1px solid #CC9"
+//         counteur.style.transform = "scale(1)"
+//         counteur.style.borderRadius= "15px"
+//         counteur.style.opacity =".7"
+//     })
+// })
+// window.addEventListener("mousemove", (e)=>{
+//     mousemove.style.left = e.pageX + 'px';
+//     mousemove.style.top = e.pageY + 'px';
+// })
+// window.addEventListener("mousedown", (e)=>{
+//     mousemove.style.transform =" scale(2) translate(-25px, -25px)"
+//     mousemove.style.border ='0.5px solid orange'
+// })
+// window.addEventListener("mouseup", (e)=>{
+//     mousemove.style.transform =" scale(1) translate(-50px, -50px)"
+//     mousemove.style.border ='1px solid #ec33'
+// })
+// function sliderAuto(){
+
+//   compteurImage = compteurImage + 1;
+//   image.src="../background/Bg"+ compteurImage +".jpg";
+//   if(compteurImage >= totalImage){
+//       compteurImage =1;
+//   }if(compteurImage < 1){
+//       compteurImage = totalImage;
+//   }
+// }
+// window.setInterval(sliderAuto, 3000);
+ 
+		</script>
+</body>
+</html>
