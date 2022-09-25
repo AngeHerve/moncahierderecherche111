@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap');
+*{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+}
+.alert{
+    height: 30px !important;
+    padding: 3px 3px;
+    font-size: 10px;
+}
+.bg-sign-in,.bg-sign-up{
+    display: inline-block;
+}
+.mtn{
+display: inline-block;
+margin-left: 30px;
+
+}
+
+
+ .g{
+    position: absolute;
+  right: 0;
+ top: 0;
+ z-index: -1;
+
+}   
+.form-sign-in,.sign-up{
+    box-sizing: border-box;
+    border:1px solid gray;
+    box-shadow: 2px 2px 1px gray;
+    border-radius: 10px; 
+}
+.col{
+background-color: #2071DB;
+}
+.regi{
+position: absolute;
+right: 25px;
+top: 20px;
+
+}
+
+button[type="submit"]{
+    background-color: #2071DB;
+}
+/* .MCR {
+    border-left:solid 6px #00C1FE;
+} */
+.bg-sign-in p,.bg-sign-in label{
+    font-size: 14px;
+    line-height:17,07px;
+    font-weight: 400;
+    color:#6C6C6C;
+}
+input[type="email"]::placeholder,input[type="password"]::placeholder{
+    font-size: 12px;
+    line-height: 15px;
+    color: #CDCDCD;
+}
+.sign-in{
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 600;
+}
+/* start dashboard */
+/* start sidebar */
+.bg-sidebar{
+    background-color: #2071DB;
+    transition: 0.6s ease-in-out;
+    z-index: 1;
+    width: 50px;
+}
+.bg-content{
+    background:#F8F8F8;
+}
+.h7{
+    margin: 20px 0 0 -50px;
+    font-size: 14px;
+}
+.De{
+    margin-top:120px ;
+}
+/* :start Search bar/icon */
+.sg{
+    text-align: left;
+
+}
+
+/* end sidebar */
+/* start cards */
+/* .admin-color{
+    color: #04b7ee ;
+} */
+.cards .card__items{
+    border-radius: 8px;
+    width: 170px;
+    height: 170px;
+    margin: 15px 0 0 15px;
+}
+.card__items--blue{
+    background-color:#F0F9FF;
+}
+.card__items--blue i{
+    color: #74C1ED;
+}
+.card__items--rose{
+    background-color:#FEF6FB;
+}
+.card__items--rose i{
+    color:#EE95C5;
+}
+.card__items--yellow{
+    background-color:#FEFBEC;
+}
+.card__items--yellow i{
+    color:#00C1FE;
+}
+/* .card__items--gradient{
+    background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+} */
+.card__items--gradient i{
+    color:#FFFFFF;
+}
+.nbr{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+/* end cards */
+/* end dashboard */
+
+
+/* start students list  */
+.z{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+.table th{
+    font-size: 12px;
+    color:#ACACAC;
+}
+table tbody{
+    font-size: 14px;
+}
+.table a{
+    color:#00C1FE;
+}
+.student-list-header{
+    border-bottom: 2px solid #E5E5E5;
+}
+.student-list-header i{
+    color:#00C1FE;
+}
+
+.btn-register{
+    background-color: #2071DB;
+  border-color: #2071DB;
+}
+.btn-register:hover {
+    background-color: #00C1FE;
+  border-color: #00C1FE;
+}
+.btn-register:focus{
+    background-color: none;
+}
+/* end students list */
+.fa-search{
+    left:-30px;
+}
+
+.valid{
+    color: red;
+}
+@media screen and (min-width:768px){
+    .bg-sidebar{
+        position: sticky !important;
+        top: 0;
+        width: 25% !important;
+    }
+    .hidden-sidebar{
+        margin-left: -25%;
+        
+    }
+}
+@media screen and (max-width:768px){
+    .hidden-sidebar-mobile{
+        margin-left: -50%;
+    }
+    
+}
